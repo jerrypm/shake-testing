@@ -297,6 +297,30 @@ body {
     color: #333;
 }
 
+/* Simulator note */
+.simulator-note {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid #2196F3;
+    border-radius: 4px;
+}
+
+.simulator-note p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.simulator-note kbd {
+    background: #333;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
 /* Footer */
 .footer {
     text-align: center;

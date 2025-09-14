@@ -62,6 +62,15 @@ class ShakeDetector {
         this.elements.startBtn.addEventListener('click', () => this.toggleShakeDetection());
         this.elements.resetBtn.addEventListener('click', () => this.resetStats());
         this.elements.sensitivitySlider.addEventListener('input', (e) => this.updateSensitivity(e.target.value));
+        
+        // Add keyboard simulation for testing in simulators
+        document.addEventListener('keydown', (e) => {
+            if (this.isActive && e.code === 'Space') {
+                e.preventDefault();
+                this.onShakeDetected();
+                console.log('Simulated shake via spacebar');
+            }
+        });
     }
 
     getSensitivityThreshold() {
