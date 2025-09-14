@@ -1,87 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Device Shake Testing</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <header class="header">
-            <h1 class="title">Device Shake Testing</h1>
-            <p class="subtitle">Test shake functionality on Android & iOS</p>
-        </header>
+      <header class="header">
+        <h1 class="title">Device Shake Testing</h1>
+        <p class="subtitle">Test shake functionality on Android & iOS</p>
+      </header>
 
-        <main class="main-content">
-            <div class="status-card">
-                <div class="status-indicator" id="statusIndicator"></div>
-                <h2 class="status-text" id="statusText">Ready to Test</h2>
-                <p class="status-description" id="statusDescription">
-                    Shake your device to test motion detection
-                </p>
+      <main class="main-content">
+        <div class="status-card">
+          <div class="status-indicator" id="statusIndicator"></div>
+          <h2 class="status-text" id="statusText">Ready to Test</h2>
+          <p class="status-description" id="statusDescription">
+            Shake your device to test motion detection
+          </p>
+        </div>
+
+        <div class="controls">
+          <button class="btn btn-primary" id="startBtn">Start Testing</button>
+          <button class="btn btn-secondary" id="resetBtn" disabled>
+            Reset
+          </button>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-label">Shake Count</span>
+            <span class="stat-value" id="shakeCount">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Last Shake</span>
+            <span class="stat-value" id="lastShake">Never</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Sensitivity</span>
+            <span class="stat-value" id="sensitivity">Medium</span>
+          </div>
+        </div>
+
+        <div class="settings-panel">
+          <h3 class="settings-title">Settings</h3>
+          <div class="setting-item">
+            <label for="sensitivitySlider" class="setting-label"
+              >Sensitivity Level</label
+            >
+            <input
+              type="range"
+              id="sensitivitySlider"
+              class="slider"
+              min="1"
+              max="3"
+              value="2"
+            />
+            <div class="slider-labels">
+              <span>Low</span>
+              <span>Medium</span>
+              <span>High</span>
             </div>
+          </div>
+        </div>
 
-            <div class="controls">
-                <button class="btn btn-primary" id="startBtn">Start Testing</button>
-                <button class="btn btn-secondary" id="resetBtn" disabled>Reset</button>
+        <div class="device-info">
+          <h3 class="info-title">Device Information</h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Platform:</span>
+              <span class="info-value" id="platform">-</span>
             </div>
-
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-label">Shake Count</span>
-                    <span class="stat-value" id="shakeCount">0</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">Last Shake</span>
-                    <span class="stat-value" id="lastShake">Never</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">Sensitivity</span>
-                    <span class="stat-value" id="sensitivity">Medium</span>
-                </div>
+            <div class="info-item">
+              <span class="info-label">Motion Support:</span>
+              <span class="info-value" id="motionSupport">-</span>
             </div>
-
-            <div class="settings-panel">
-                <h3 class="settings-title">Settings</h3>
-                <div class="setting-item">
-                    <label for="sensitivitySlider" class="setting-label">Sensitivity Level</label>
-                    <input type="range" id="sensitivitySlider" class="slider" min="1" max="3" value="2">
-                    <div class="slider-labels">
-                        <span>Low</span>
-                        <span>Medium</span>
-                        <span>High</span>
-                    </div>
-                </div>
+            <div class="info-item">
+              <span class="info-label">Permission Status:</span>
+              <span class="info-value" id="permissionStatus">-</span>
             </div>
+          </div>
+          <div class="simulator-note">
+            <p>
+              <strong>For Simulators/Emulators:</strong> Press
+              <kbd>Space</kbd> to simulate shake when testing is active
+            </p>
+          </div>
+        </div>
+      </main>
 
-            <div class="device-info">
-                <h3 class="info-title">Device Information</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">Platform:</span>
-                        <span class="info-value" id="platform">-</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Motion Support:</span>
-                        <span class="info-value" id="motionSupport">-</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Permission Status:</span>
-                        <span class="info-value" id="permissionStatus">-</span>
-                    </div>
-                </div>
-                <div class="simulator-note">
-                    <p><strong>For Simulators/Emulators:</strong> Press <kbd>Space</kbd> to simulate shake when testing is active</p>
-                </div>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p>&copy; 2024 Device Shake Testing Tool</p>
-        </footer>
+      <footer class="footer">
+        <p>&copy; 2025 Device Shake Testing Tool - Jerry P.M</p>
+      </footer>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
